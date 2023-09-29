@@ -26,6 +26,11 @@ public class AddressBook
         return null;
     }
 
+    public int countBuddy()
+    {
+        return buds.size();
+    }
+
     public static void main(String[] args)
     {
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
