@@ -11,12 +11,18 @@ public class AddressBook
 
     public void addBuddy(BuddyInfo newBud)
     {
-        buds.add(newBud);
+        if(newBud != null){
+            buds.add(newBud);
+        }
+
     }
 
-    public void removeBuddy(BuddyInfo loseBud)
+    public BuddyInfo removeBuddy(int index)
     {
-        buds.remove(loseBud);
+        if(index >= 0 && index < buds.size()){
+            return buds.remove(index);
+        }
+        return null;
     }
 
     public static void main(String[] args)
@@ -24,7 +30,6 @@ public class AddressBook
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
-        System.out.println("Address Book");
+        addressBook.removeBuddy(0);
     }
 }
