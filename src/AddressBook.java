@@ -17,6 +17,7 @@ public class AddressBook
 
     }
 
+    // removes BuffyInfo obj at selected index
     public BuddyInfo removeBuddy(int index)
     {
         if(index >= 0 && index < buds.size()){
